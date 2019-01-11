@@ -13,9 +13,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function checkForm(form)
   {
       re =/[1-9]\d{4,}/g;
-      if(!re.test(form.pwd.value)) 
+      if(re.test(form.pwd.value)) 
       {
-        console.log(false);
+        console.log(true);
       }
   }
 
