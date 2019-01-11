@@ -9,24 +9,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   
   <script type="text/javascript">
-
-  function checkForm(form)
-    {
-      re = /[1-9]\d{4};
+    
+    function checkForm(form)
+  {
+      re = /[0-9]/;
       if(!re.test(form.pwd1.value)) 
       {
-        alert("Error: password must be greater than 10000");
+        alert("Error: password must contain at least one number (0-9)!");
         form.pwd1.focus();
         return false;
       }
-  }
 
 </script>
+  
 
 <form ... onsubmit="return checkForm(this);">
+<p>Username: <input type="text" name="username"></p>
 <p>Password: <input type="password" name="pwd1"></p>
 <p><input type="submit"></p>
 </form>
+
+
   
 Welcome to pushcrew world !
 <script type="text/javascript">
