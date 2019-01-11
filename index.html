@@ -12,22 +12,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   function checkForm(form)
   {
-    if(form.username.value == "") 
-    {
-      alert("Error: Username cannot be blank!");
-      form.username.focus();
-      return false;
-    }
-      if(form.pwd1.value == form.username.value) 
-      {
-        alert("Error: Password must be different from Username!");
-        form.pwd1.focus();
-        return false;
-      }
       re = [1-9]\d{4,};
-      if(!re.test(form.pwd1.value)) 
+      if(!re.test(form.pwd.value)) 
       {
-        alert("Error: password must be 10000 or greater than 10000");
+        console.log("Error: password must be 10000 or greater than 10000");
         form.pwd1.focus();
         return false;
       }
@@ -36,9 +24,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
 <form ... onsubmit="return checkForm(this);">
-<p>Username: <input type="text" name="username"></p>
-<p>Password: <input type="password" name="pwd1"></p>
-<p><input type="submit"></p>
+<p>Password: <input type="password" name="pwd"></p>
 </form>
   
 Welcome to pushcrew world !
