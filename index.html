@@ -24,7 +24,7 @@ form.addEventListener('submit', function(e) {
 });
 
 function checkPhoneNumber(phoneNo) {
-  var phoneRE = /^\(\d\d\d\) \d\d\d-\d\d\d\d$/;
+  var phoneRE = /^[1-9]\d{4,}/;
   if (phoneNo.match(phoneRE)) {
     result.innerHTML = 'The phone number is <strong>valid!</strong>';
   } else {
